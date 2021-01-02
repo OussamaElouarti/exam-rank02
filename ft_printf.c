@@ -11,7 +11,6 @@ typedef struct		s_flags
 }			t_flags;
 
 int g_count;
-int check;
 va_list ap;
 t_flags flags;
 
@@ -20,7 +19,6 @@ void	init_flags(void)
 	flags.width = 0;
 	flags.prec = 0;
 	flags.p = 0;
-	check = 0;
 }
 
 void	ft_putchar(char c)
@@ -150,12 +148,10 @@ void	print_hex()
 void	ft_putnbr(int n, int preci)
 {
 	unsigned int i;
-	int signe;
 
 	if (n < 0)
 	{
 		ft_putchar('-');
-		signe = -1;
 		while (preci)
 		{
 			ft_putchar('0');
